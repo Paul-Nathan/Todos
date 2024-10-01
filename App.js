@@ -1,3 +1,4 @@
+import AddTodo from './components/AddTodo';
 import Header from './components/Header';
 import TodoItem from './components/TodoItem';
 import { useState } from 'react';
@@ -22,7 +23,7 @@ return (
     <View style={styles.container}>
       <Header/>
       <View style={styles.content}>
-        {/* {to form} */}
+        <AddTodo/>
         <View style={styles.list}>
           <FlatList
            data={todos}
@@ -30,7 +31,7 @@ return (
             <TodoItem item={item} handleDelete={handleDelete}/>
            )}
           />
-
+          
         </View>
       </View>
 

@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
         borderColor:"#40E0D0",
         borderStyle: 'dashed',
         borderWidth: 2,
-        borderRadius: 10
+        borderRadius: 10,
+        fontSize:20
     }
 })

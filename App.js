@@ -19,11 +19,21 @@ export default function App() {
   })
     
   }
+
+  const submitHandler =(text)=>{
+    setTodos((prevText)=>{
+      return[
+        {text:text, key:Math.random().toString()},
+        ...prevText
+      ]
+    })
+  }
+
 return (
     <View style={styles.container}>
       <Header/>
       <View style={styles.content}>
-        <AddTodo/>
+        <AddTodo submitHandler={submitHandler}/>
         <View style={styles.list}>
           <FlatList
            data={todos}
@@ -44,7 +54,7 @@ return (
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF3E0',
+    backgroundColor: '#FFDAB9',
   },
   content:{
     padding:45, 
